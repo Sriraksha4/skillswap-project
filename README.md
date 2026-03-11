@@ -279,9 +279,9 @@ Then the platform automatically connects them.
 Example output:
 
 ```
-🎉 Hurray Sriraksha!
-Swathi can teach you Music
-Contact: swathi@email.com
+🎉 Hurray abc!
+xyz can teach you Music
+Contact: xyz@email.com
 ```
 
 ---
