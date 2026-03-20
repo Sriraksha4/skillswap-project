@@ -1,0 +1,259 @@
+.match-container {
+  animation: fadeIn 0.4s ease-out;
+}
+
+.match-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.header-icon {
+  font-size: 48px;
+  color: #f59e0b;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.match-header h1 {
+  font-size: 32px;
+  color: #1f2937;
+  margin: 0 0 8px 0;
+}
+
+.match-header p {
+  font-size: 16px;
+  color: #6b7280;
+  margin: 0;
+}
+
+.loading-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  gap: 20px;
+}
+
+.spinner-icon {
+  font-size: 48px;
+  color: #6366f1;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-state p {
+  font-size: 16px;
+  color: #6b7280;
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  gap: 16px;
+  background: white;
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.empty-icon {
+  font-size: 64px;
+  margin-bottom: 16px;
+}
+
+.empty-state h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0;
+}
+
+.empty-state p {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 0;
+}
+
+.matches-grid {
+  display: grid;
+  gap: 24px;
+}
+
+.match-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  border: 2px solid #e5e7eb;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.match-card:hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15);
+  border-color: #f59e0b;
+  transform: translateY(-4px);
+}
+
+.match-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  color: white;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+}
+
+.match-content {
+  padding: 32px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 24px;
+}
+
+.match-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.teacher-avatar,
+.learner-avatar {
+  font-size: 36px;
+}
+
+.section-label {
+  font-size: 12px;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.teacher-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0;
+}
+
+.teaching-skill {
+  font-size: 13px;
+  color: #6b7280;
+  margin: 0;
+}
+
+.highlight {
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 4px;
+}
+
+.highlight.teach {
+  color: #10b981;
+}
+
+.highlight.learn {
+  color: #6366f1;
+  font-size: 18px;
+}
+
+.match-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9ca3af;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(6px);
+  }
+}
+
+.match-footer {
+  padding: 0 32px 32px 32px;
+  display: flex;
+  gap: 12px;
+}
+
+.contact-btn {
+  flex: 1;
+  padding: 12px 16px;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.contact-btn.profile-btn {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+.contact-btn.profile-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(245, 158, 11, 0.3);
+}
+
+.contact-btn.message-btn {
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+}
+
+.contact-btn.message-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
+}
+
+@media (max-width: 768px) {
+  .match-content {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .match-arrow {
+    transform: rotate(90deg);
+    margin: 8px 0;
+  }
+
+  .teacher-info,
+  .learner-info {
+    padding-left: 16px;
+  }
+
+  .match-card {
+    padding: 24px 0;
+  }
+
+  .match-footer {
+    padding: 0 32px 16px 32px;
+  }
+}
